@@ -1,15 +1,15 @@
 {
-    "name": "michelecurletta/laravel-opcache-clear",
+    "name": "pou/lumen-opcache-clear",
     "description": "This package allows you to clear OPcache when running PHP in FPM mode.",
     "type": "package",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.*",
+        "laravel/lumen-framework": "5.*",
         "guzzlehttp/guzzle": "6.*"
     },
     "keywords":
         [
-            "laravel",
+            "lumen",
             "cache",
             "opcache",
             "reset",
