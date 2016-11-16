@@ -8,8 +8,8 @@ These instructions allows you to install the package into an existing Laravel ap
 
 ### Prerequisities
 
-Laravel 5 up&running installation.
-
+Lumen 5 up&running installation.
+Registered Crypt alias. 
 
 ### Installation
 

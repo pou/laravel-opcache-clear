@@ -2,7 +2,7 @@
 
 namespace MicheleCurletta\LaravelOpcacheClear;
 
-use App\Http\Controllers\Controller;
+use Laravel\Lumen\Routing\Controller;
 use Illuminate\Http\Request;
 use Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
@@ -10,7 +10,7 @@ use Illuminate\Contracts\Encryption\DecryptException;
 class OpcacheClearController extends Controller
 {
  
-    protected function opcacheClear(Request $request)
+    public function opcacheClear(Request $request)
     {   
         $original = config('app.key');
 
