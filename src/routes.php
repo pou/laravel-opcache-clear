@@ -1,3 +1,3 @@
 <?php
 
-$this->app->get('opcache-clear', 'MicheleCurletta\LaravelOpcacheClear\OpcacheClearController@opcacheClear');
+$this->app->router->get('opcache-clear', 'MicheleCurletta\LaravelOpcacheClear\OpcacheClearController@opcacheClear');

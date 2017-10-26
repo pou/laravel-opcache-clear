@@ -44,8 +44,9 @@ class OpcacheClearCommand extends Command
 
         $client = new Client(['base_uri' => config('app.url')]);
         $response = $client->request('GET', '/opcache-clear?token=' . $encryptedToken);
+        $response = json_decode($response->getBody()->getContents(), true);
 
-        if(($response->json()['result'])) {
+        if(($response['result'])) {
           $this->line('So far, so good.');
         } else {
           $this->line('Ooops!');
