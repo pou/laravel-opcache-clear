@@ -24,7 +24,7 @@ class OpcacheClearServiceProvider extends ServiceProvider
     public function register()
     {
         include __DIR__.'/routes.php';
-        $this->app->make('MicheleCurletta\LaravelOpcacheClear\OpcacheClearController');
+        $this->app->make(OpcacheClearController::class);
 
         $this->app->bind('command.opcache:clear', OpcacheClearCommand::class);
 

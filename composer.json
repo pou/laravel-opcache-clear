@@ -3,9 +3,9 @@
     "description": "This package allows you to clear OPcache when running PHP in FPM mode.",
     "type": "package",
     "require": {
-        "php": ">=5.5.9",
-        "laravel/lumen-framework": "5.*",
-        "guzzlehttp/guzzle": "5.3.*"
+        "php": ">=7.0",
+        "laravel/lumen-framework": "5.5.*",
+        "guzzlehttp/guzzle": "6.*"
     },
     "keywords":
         [
@@ -20,6 +20,10 @@
         {
             "name": "Michele Giovanni Curletta",
             "email": "michele.curletta@icloud.com"
+        },
+        {
+    	    "name": "Alex Fedorko",
+    	    "email": "alex.fedorko@gmail.com"
         }
     ],
     "minimum-stability": "dev",

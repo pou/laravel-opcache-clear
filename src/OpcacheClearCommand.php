@@ -39,22 +39,16 @@ class OpcacheClearCommand extends Command
      */
     public function handle()
     {
-        $client = new Client;
-        $request = $client->createRequest('GET', config('app.url', 'http://localhost'));
-        $request->setPath('/opcache-clear');
-
         $originalToken = config('app.key');
-
         $encryptedToken = Crypt::encrypt($originalToken);
 
-        $request->getQuery()->set('token', $encryptedToken);
+        $client = new Client(['base_uri' => config('app.url')]);
+        $response = $client->request('GET', '/opcache-clear?token=' . $encryptedToken);
 
-        $response = $client->send($request);
-
-        if(($response->json()['result']))
-            $this->line('So far, so good.');
-        else
-            $this->line('Ooops!');
-
+        if(($response->json()['result'])) {
+          $this->line('So far, so good.');
+        } else {
+          $this->line('Ooops!');
+        }
     }
 }
